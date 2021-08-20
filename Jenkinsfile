@@ -13,6 +13,7 @@ pipeline {
                  }
 
             }
+        }
         stage('build') {
             steps {
                 sh 'mvn package'
@@ -25,11 +26,11 @@ pipeline {
                  }
 
             }
+        }
 
 
     }
 
 
    
-
 }
