@@ -6,17 +6,16 @@ pipeline {
                 sh 'mvn package'
             }
         }
-        post {
-             always {
-                 junit '**/target/*.xml'
-             }
-             failure {
+    }
+    post {
+         always {
+              junit '**/target/*.xml'
+         }
+         failure {
                  mail bcc: '', body: 'failure of build', cc: '', from: '', replyTo: '', subject: 'build failed', to: 'akshaykatrojwar@gmail.com'
-             }
-       
-        }
+         }
 
-   }
+    }
 
    
 }
