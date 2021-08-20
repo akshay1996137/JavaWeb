@@ -8,11 +8,9 @@ pipeline {
         }
     }
     post {
+        
          always {
-              junit '**/target/*.xml'
-         }
-         failure {
-                 mail bcc: '', body: 'failure of build', cc: '', from: '', replyTo: '', subject: 'build failed', to: 'akshaykatrojwar@gmail.com'
+                 mail bcc: '', body: 'failure of build', cc: '', from: '', replyTo: '', subject: 'build pass', to: 'akshaykatrojwar@gmail.com'
          }
 
     }
