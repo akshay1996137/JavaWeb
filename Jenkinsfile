@@ -22,6 +22,12 @@ pipeline {
                 sh 'mvn verify'
             }
         }
+        stage('sonar-analysis') {
+            steps {
+                sh 'mvn sonar:sonar'
+            }
+        }
+
     }
 }
 
