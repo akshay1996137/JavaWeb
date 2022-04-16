@@ -43,7 +43,7 @@ pipeline {
             }
         }
 
-        apache-tomcat-7.0.94/webapps/
+        
 
 
 
