@@ -37,6 +37,13 @@ pipeline {
                 sh 'mvn deploy'
             }
         }
+        stage('deploy to tomcat'){
+            steps {
+              sh 'cp */*.war  apache-tomcat-7.0.94/webapps/'
+            }
+        }
+
+        apache-tomcat-7.0.94/webapps/
 
 
 
