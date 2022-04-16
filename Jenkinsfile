@@ -9,17 +9,17 @@ pipeline {
         }
         stage('mvn test') {
             steps {
-                echo 'Hello World my  name is akshay'
+                sh mvn test
             }
         }
         stage('mvn compile') {
             steps {
-                echo 'Hello World my  name is akshay'
+                sh mvn compile
             }
         }
         stage('mvn verify') {
             steps {
-                echo 'Hello World my  name is akshay'
+                sh mvn verify
             }
         }
     }
