@@ -39,7 +39,7 @@ pipeline {
         }
         stage('deploy to tomcat'){
             steps {
-               sh 'cp */*.war  /home/centos/apache-tomcat-7.0.94/webapps/'
+               deploy contextPath: '**/webapps/', war: '**/*.war'
             }
         }
 
